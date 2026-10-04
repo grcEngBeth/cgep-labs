@@ -39,6 +39,7 @@ resource "aws_s3_bucket" "primary" {
 # SC-28: Protection of information at rest.
 # AES-256 keeps this lab simple. The commented block below shows how you'd
 # switch to KMS-managed keys, covered in a later lab.
+# tfsec:ignore:aws-s3-encryption-customer-key Accepted risk: SSE-S3 (AES256) satisfies SC-28 for this lab; customer-managed KMS key deferred to a later lab.
 resource "aws_s3_bucket_server_side_encryption_configuration" "primary" {
   bucket = aws_s3_bucket.primary.id
   rule {
