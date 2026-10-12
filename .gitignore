@@ -10,3 +10,8 @@ crash.log
 # OS noise
 .DS_Store
 plan.json
+
+# Terraform local state and plugins
+**/.terraform/
+*.tfstate
+*.tfstate.*
