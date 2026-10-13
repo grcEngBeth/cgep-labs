@@ -16,3 +16,5 @@ plan.json
 *.tfstate
 *.tfstate.*
 apply.log
+.trestle-work/
+.venv/
